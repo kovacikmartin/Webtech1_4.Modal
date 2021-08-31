@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal tabuľka</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="valueInput">
+            <label for="valueX">X</label>
+            <input type="number" min="1" max="9" step="1" id="valueX" onblur="valueCheckX();">
+            <span class="errorMsg" id="valueXMsg"></span>
+        </div>
+
+        <div class="valueInput">
+            <label for="valueY">Y</label>
+            <input type="number" min="1" max="9" step="1" id="valueY" onblur="valueCheckY();">
+            <span class="errorMsg" id="valueYMsg"></span>
+        </div>
+
+        <button onclick="showModal();">Create table</button>
+    </div>
+    <div class="modalContainer" id="tableModal">
+        <div class="modal" id="modalContent">
+            <span onclick="closeTable();">X</span>
+            <h3>Table of values (x*y)</h3>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
